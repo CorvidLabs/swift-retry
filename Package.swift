@@ -21,19 +21,10 @@ let package = Package(
         .package(url: "https://github.com/swiftlang/swift-docc-plugin", from: "1.4.3")
     ],
     targets: [
-        .target(
-            name: "Retry",
-            dependencies: [],
-            swiftSettings: [
-                .enableUpcomingFeature("StrictConcurrency")
-            ]
-        ),
+        .target(name: "Retry"),
         .testTarget(
             name: "RetryTests",
-            dependencies: ["Retry"],
-            swiftSettings: [
-                .enableUpcomingFeature("StrictConcurrency")
-            ]
+            dependencies: ["Retry"]
         )
     ]
 )

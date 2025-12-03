@@ -1,17 +1,21 @@
 import Foundation
 
-/// A circuit breaker that prevents cascading failures by stopping retry attempts
-/// when a failure threshold is exceeded
+/**
+ A circuit breaker that prevents cascading failures by stopping retry attempts
+ when a failure threshold is exceeded
+ */
 public actor CircuitBreaker {
     private var state: CircuitState
     private var failureCount: Int
     private let failureThreshold: Int
     private let resetTimeout: TimeInterval
 
-    /// Create a circuit breaker
-    /// - Parameters:
-    ///   - failureThreshold: Number of consecutive failures before opening the circuit
-    ///   - resetTimeout: Time to wait before transitioning from open to half-open
+    /**
+     Create a circuit breaker
+     - Parameters:
+       - failureThreshold: Number of consecutive failures before opening the circuit
+       - resetTimeout: Time to wait before transitioning from open to half-open
+     */
     public init(
         failureThreshold: Int = 5,
         resetTimeout: TimeInterval = 60.0
@@ -44,8 +48,10 @@ public actor CircuitBreaker {
         }
     }
 
-    /// Check if an operation should be allowed
-    /// - Returns: `true` if the operation can proceed, `false` if blocked
+    /**
+     Check if an operation should be allowed
+     - Returns: `true` if the operation can proceed, `false` if blocked
+     */
     public func shouldAllowRequest() -> Bool {
         switch state {
         case .closed:

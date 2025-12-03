@@ -4,8 +4,10 @@ import Foundation
 public struct ConstantStrategy: RetryStrategy {
     private let constantDelay: TimeInterval
 
-    /// Create a constant delay retry strategy
-    /// - Parameter delay: The fixed delay between retry attempts
+    /**
+     Create a constant delay retry strategy
+     - Parameter delay: The fixed delay between retry attempts
+     */
     public init(delay: TimeInterval) {
         self.constantDelay = delay
     }
@@ -16,8 +18,10 @@ public struct ConstantStrategy: RetryStrategy {
 }
 
 public extension RetryStrategy where Self == ConstantStrategy {
-    /// Create a constant delay retry strategy
-    /// - Parameter delay: The fixed delay between retry attempts
+    /**
+     Create a constant delay retry strategy
+     - Parameter delay: The fixed delay between retry attempts
+     */
     static func constant(_ delay: TimeInterval) -> ConstantStrategy {
         ConstantStrategy(delay: delay)
     }

@@ -1,6 +1,7 @@
 # SwiftRetry
 
-[![CI](https://img.shields.io/github/actions/workflow/status/CorvidLabs/swift-retry/ci.yml?label=CI&branch=main)](https://github.com/CorvidLabs/swift-retry/actions/workflows/ci.yml)
+[![macOS](https://img.shields.io/github/actions/workflow/status/CorvidLabs/swift-retry/macOS.yml?label=macOS&branch=main)](https://github.com/CorvidLabs/swift-retry/actions/workflows/macOS.yml)
+[![Ubuntu](https://img.shields.io/github/actions/workflow/status/CorvidLabs/swift-retry/ubuntu.yml?label=Ubuntu&branch=main)](https://github.com/CorvidLabs/swift-retry/actions/workflows/ubuntu.yml)
 [![License](https://img.shields.io/github/license/CorvidLabs/swift-retry)](https://github.com/CorvidLabs/swift-retry/blob/main/LICENSE)
 [![Version](https://img.shields.io/github/v/release/CorvidLabs/swift-retry)](https://github.com/CorvidLabs/swift-retry/releases)
 

@@ -2,16 +2,18 @@ import Foundation
 
 /// Main retry execution engine with async/await support
 public enum Retry {
-    /// Execute an operation with retry logic
-    /// - Parameters:
-    ///   - maxAttempts: Maximum number of retry attempts
-    ///   - strategy: Delay strategy between retries
-    ///   - jitter: Jitter to apply to delays
-    ///   - circuitBreaker: Optional circuit breaker to prevent cascading failures
-    ///   - configuration: Additional retry configuration
-    ///   - operation: The async operation to execute
-    /// - Returns: The result of the operation
-    /// - Throws: The last error if all retries fail, or a RetryError
+    /**
+     Execute an operation with retry logic
+     - Parameters:
+       - maxAttempts: Maximum number of retry attempts
+       - strategy: Delay strategy between retries
+       - jitter: Jitter to apply to delays
+       - circuitBreaker: Optional circuit breaker to prevent cascading failures
+       - configuration: Additional retry configuration
+       - operation: The async operation to execute
+     - Returns: The result of the operation
+     - Throws: The last error if all retries fail, or a RetryError
+     */
     public static func execute<T>(
         maxAttempts: Int = 3,
         strategy: some RetryStrategy = ConstantStrategy(delay: 1.0),
@@ -94,15 +96,17 @@ public enum Retry {
         )
     }
 
-    /// Execute an operation with a full configuration object
-    /// - Parameters:
-    ///   - configuration: Retry configuration
-    ///   - strategy: Delay strategy between retries
-    ///   - jitter: Jitter to apply to delays
-    ///   - circuitBreaker: Optional circuit breaker
-    ///   - operation: The async operation to execute
-    /// - Returns: The result of the operation
-    /// - Throws: The last error if all retries fail, or a RetryError
+    /**
+     Execute an operation with a full configuration object
+     - Parameters:
+       - configuration: Retry configuration
+       - strategy: Delay strategy between retries
+       - jitter: Jitter to apply to delays
+       - circuitBreaker: Optional circuit breaker
+       - operation: The async operation to execute
+     - Returns: The result of the operation
+     - Throws: The last error if all retries fail, or a RetryError
+     */
     public static func execute<T>(
         configuration: RetryConfiguration,
         strategy: some RetryStrategy,
@@ -120,12 +124,14 @@ public enum Retry {
         )
     }
 
-    /// Execute an operation with minimal configuration (convenience method)
-    /// - Parameters:
-    ///   - maxAttempts: Maximum number of retry attempts
-    ///   - operation: The async operation to execute
-    /// - Returns: The result of the operation
-    /// - Throws: The last error if all retries fail, or a RetryError
+    /**
+     Execute an operation with minimal configuration (convenience method)
+     - Parameters:
+       - maxAttempts: Maximum number of retry attempts
+       - operation: The async operation to execute
+     - Returns: The result of the operation
+     - Throws: The last error if all retries fail, or a RetryError
+     */
     public static func execute<T>(
         maxAttempts: Int = 3,
         operation: @Sendable () async throws -> T
@@ -142,15 +148,17 @@ public enum Retry {
 // MARK: - Result-based API
 
 public extension Retry {
-    /// Execute an operation and return a Result
-    /// - Parameters:
-    ///   - maxAttempts: Maximum number of retry attempts
-    ///   - strategy: Delay strategy between retries
-    ///   - jitter: Jitter to apply to delays
-    ///   - circuitBreaker: Optional circuit breaker
-    ///   - configuration: Additional retry configuration
-    ///   - operation: The async operation to execute
-    /// - Returns: A Result containing either the success value or the final error
+    /**
+     Execute an operation and return a Result
+     - Parameters:
+       - maxAttempts: Maximum number of retry attempts
+       - strategy: Delay strategy between retries
+       - jitter: Jitter to apply to delays
+       - circuitBreaker: Optional circuit breaker
+       - configuration: Additional retry configuration
+       - operation: The async operation to execute
+     - Returns: A Result containing either the success value or the final error
+     */
     static func executeReturningResult<T>(
         maxAttempts: Int = 3,
         strategy: some RetryStrategy = ConstantStrategy(delay: 1.0),

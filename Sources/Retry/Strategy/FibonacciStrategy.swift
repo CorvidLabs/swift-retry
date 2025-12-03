@@ -4,8 +4,10 @@ import Foundation
 public struct FibonacciStrategy: RetryStrategy {
     private let base: TimeInterval
 
-    /// Create a Fibonacci sequence retry strategy
-    /// - Parameter base: The base unit of time multiplied by the Fibonacci number
+    /**
+     Create a Fibonacci sequence retry strategy
+     - Parameter base: The base unit of time multiplied by the Fibonacci number
+     */
     public init(base: TimeInterval) {
         self.base = base
     }
@@ -32,8 +34,10 @@ public struct FibonacciStrategy: RetryStrategy {
 }
 
 public extension RetryStrategy where Self == FibonacciStrategy {
-    /// Create a Fibonacci sequence retry strategy
-    /// - Parameter base: The base unit of time multiplied by the Fibonacci number
+    /**
+     Create a Fibonacci sequence retry strategy
+     - Parameter base: The base unit of time multiplied by the Fibonacci number
+     */
     static func fibonacci(base: TimeInterval) -> FibonacciStrategy {
         FibonacciStrategy(base: base)
     }

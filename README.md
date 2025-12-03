@@ -1,8 +1,8 @@
 # SwiftRetry
 
-![Swift 6.0+](https://img.shields.io/badge/Swift-6.0+-orange.svg)
-![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20visionOS%20%7C%20Linux-lightgrey.svg)
-![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
+[![CI](https://img.shields.io/github/actions/workflow/status/CorvidLabs/swift-retry/ci.yml?label=CI&branch=main)](https://github.com/CorvidLabs/swift-retry/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/CorvidLabs/swift-retry)](https://github.com/CorvidLabs/swift-retry/blob/main/LICENSE)
+[![Version](https://img.shields.io/github/v/release/CorvidLabs/swift-retry)](https://github.com/CorvidLabs/swift-retry/releases)
 
 A robust, protocol-oriented retry library for Swift 6 with comprehensive backoff strategies, jitter support, and circuit breaker patterns.
 

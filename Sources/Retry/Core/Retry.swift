@@ -14,14 +14,14 @@ public enum Retry {
      - Returns: The result of the operation
      - Throws: The last error if all retries fail, or a RetryError
      */
-    public static func execute<T>(
+    public static func execute<Output>(
         maxAttempts: Int = 3,
         strategy: some RetryStrategy = ConstantStrategy(delay: 1.0),
         jitter: some Jitter = NoJitter(),
         circuitBreaker: CircuitBreaker? = nil,
         configuration: RetryConfiguration? = nil,
-        operation: @Sendable () async throws -> T
-    ) async throws -> T {
+        operation: @Sendable () async throws -> Output
+    ) async throws -> Output {
         let config = configuration ?? RetryConfiguration(maxAttempts: maxAttempts)
         let startTime = Date()
 
@@ -107,13 +107,13 @@ public enum Retry {
      - Returns: The result of the operation
      - Throws: The last error if all retries fail, or a RetryError
      */
-    public static func execute<T>(
+    public static func execute<Output>(
         configuration: RetryConfiguration,
         strategy: some RetryStrategy,
         jitter: some Jitter = NoJitter(),
         circuitBreaker: CircuitBreaker? = nil,
-        operation: @Sendable () async throws -> T
-    ) async throws -> T {
+        operation: @Sendable () async throws -> Output
+    ) async throws -> Output {
         try await execute(
             maxAttempts: configuration.maxAttempts,
             strategy: strategy,
@@ -132,10 +132,10 @@ public enum Retry {
      - Returns: The result of the operation
      - Throws: The last error if all retries fail, or a RetryError
      */
-    public static func execute<T>(
+    public static func execute<Output>(
         maxAttempts: Int = 3,
-        operation: @Sendable () async throws -> T
-    ) async throws -> T {
+        operation: @Sendable () async throws -> Output
+    ) async throws -> Output {
         try await execute(
             maxAttempts: maxAttempts,
             strategy: ConstantStrategy(delay: 1.0),
@@ -159,14 +159,14 @@ public extension Retry {
        - operation: The async operation to execute
      - Returns: A Result containing either the success value or the final error
      */
-    static func executeReturningResult<T>(
+    static func executeReturningResult<Output>(
         maxAttempts: Int = 3,
         strategy: some RetryStrategy = ConstantStrategy(delay: 1.0),
         jitter: some Jitter = NoJitter(),
         circuitBreaker: CircuitBreaker? = nil,
         configuration: RetryConfiguration? = nil,
-        operation: @Sendable () async throws -> T
-    ) async -> Result<T, Error> {
+        operation: @Sendable () async throws -> Output
+    ) async -> Result<Output, Error> {
         do {
             let result = try await execute(
                 maxAttempts: maxAttempts,

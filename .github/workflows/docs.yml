@@ -3,6 +3,10 @@ name: Documentation
 on:
   push:
     branches: [main]
+    paths:
+      - Sources/**
+      - Package.swift
+      - .github/workflows/docs.yml
 
 permissions:
   contents: read

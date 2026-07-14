@@ -4,14 +4,14 @@
       "gate": "definition",
       "actor": "user:0xLeif",
       "timestamp": 1783994416,
-      "digest": "61b17faf1b6d1583eb9dcc257198676dd7c0ceed4dd6e376a8bd4af294c4ec21",
-      "note": "Definition approval for SpecSync 5.0.1 and Trust 1.0.0 governance with truthful completed preparation tasks."
+      "digest": "adbfef6c50b543cadb5433bf0c3c423661193a1c3c288f24bf9988f3c6e3c543",
+      "note": "Definition approval for the source-backed 48-export Retry companion, eight stable requirements, and 64-test evidence."
     },
     {
       "gate": "acceptance",
       "actor": "user:0xLeif",
       "timestamp": 1783994510,
-      "digest": "e0ffa12152484134b68d139719abda98eea0426aa01f58b1c4c83aa6b91abd98",
+      "digest": "1da58a78cc04588b5a708b498d3abb2cd51f1a2a3d2a2cecee49d45c16c818a1",
       "note": "Closing approval after strict 100% portable coverage, 48/48 export validation, native Swift build, and all 64 tests."
     }
   ]

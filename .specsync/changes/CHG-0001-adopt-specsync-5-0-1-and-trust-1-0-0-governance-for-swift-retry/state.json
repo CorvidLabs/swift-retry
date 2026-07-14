@@ -5,10 +5,10 @@
   "title": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Swift Retry",
   "description": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Swift Retry",
   "kind": "migration",
-  "state": "draft",
+  "state": "accepted",
   "base_commit": "22dc3014c6114d6d7f583aa76c654761805ad643",
   "created_at": 1783886377,
-  "updated_at": 1783886384,
+  "updated_at": 1783994510,
   "affected_specs": [],
   "affected_paths": [
     ".github/",

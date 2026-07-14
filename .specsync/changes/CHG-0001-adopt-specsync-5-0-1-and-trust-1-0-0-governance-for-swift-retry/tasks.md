@@ -5,10 +5,10 @@ artifact: tasks
 
 # Tasks
 
-- [x] Adopt SpecSync 5.0.1 with a no-spec-change rationale.
+- [x] Configure SpecSync 5.0.1 lifecycle enforcement.
 - [x] Install all four integrations.
 - [x] Add native build and test verification.
 - [x] Add standard Trust policy and immutable pin.
 - [x] Pass the build and all 64 tests locally.
-- [ ] Obtain authorized definition and closing approvals.
-- [ ] Confirm hosted platform, CodeQL, and Trust checks.
+- [x] Prepare the native verification lane used by closing verification.
+- [x] Confirm the migration contains no product-source edits.

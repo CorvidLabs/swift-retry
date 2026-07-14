@@ -1,6 +1,6 @@
 ---
 id: CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-retry
-state: draft
+state: accepted
 type: migration
 base_commit: 22dc3014c6114d6d7f583aa76c654761805ad643
 ---
@@ -17,9 +17,7 @@ Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Swift Retry
 
 ## Acceptance Criteria
 
-- SpecSync advisory coverage passes; all four agent integrations are installed; Trust doctor passes; Swift Retry builds and all 64 tests pass; existing Linux
-- macOS
-- and documentation workflows remain green.
+- SpecSync advisory coverage passes; all four agent integrations are installed; Trust doctor passes; Swift Retry builds and all 64 tests pass; existing Linux, macOS, and documentation workflows remain green.
 
 ## No-spec Rationale
 

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "CHG-0002-document-the-existing-swift-retry-api-at-complete-specsync-coverage",
+  "slug": "document-the-existing-swift-retry-api-at-complete-specsync-coverage",
+  "title": "Document the existing Swift Retry API at complete SpecSync coverage",
+  "description": "Document the existing Swift Retry API at complete SpecSync coverage",
+  "kind": "documentation",
+  "state": "accepted",
+  "base_commit": "b1d7a47869dfaeea581df0a2d7c03e6ac2bb0888",
+  "created_at": 1783994371,
+  "updated_at": 1783994510,
+  "affected_specs": [
+    "retry"
+  ],
+  "affected_paths": [
+    "Sources/",
+    "Tests/",
+    "specs/retry/",
+    ".trust.toml",
+    ".specsync/sdd.json"
+  ],
+  "no_spec_change": false,
+  "no_spec_change_rationale": null,
+  "acceptance_criteria": [
+    "An active Retry companion maps all fourteen case-correct Swift implementation paths and all 48 SpecSync-parsed public exports; eight stable requirements have native test evidence; strict SpecSync passes at 100% file and LOC coverage; no Sources or Tests files change; the native build and all 64 tests pass."
+  ],
+  "selected_artifacts": [
+    "context",
+    "docs",
+    "design",
+    "tasks",
+    "testing"
+  ],
+  "dependencies": [],
+  "answers": {
+    "architecture_risk": "no",
+    "public_contract": "no"
+  }
+}

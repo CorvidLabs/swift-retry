@@ -1,0 +1,18 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783994416,
+      "digest": "61b17faf1b6d1583eb9dcc257198676dd7c0ceed4dd6e376a8bd4af294c4ec21",
+      "note": "Definition approval for SpecSync 5.0.1 and Trust 1.0.0 governance with truthful completed preparation tasks."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783994510,
+      "digest": "e0ffa12152484134b68d139719abda98eea0426aa01f58b1c4c83aa6b91abd98",
+      "note": "Closing approval after strict 100% portable coverage, 48/48 export validation, native Swift build, and all 64 tests."
+    }
+  ]
+}

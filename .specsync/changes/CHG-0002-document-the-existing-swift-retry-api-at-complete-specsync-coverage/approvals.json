@@ -1,0 +1,18 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783994416,
+      "digest": "adbfef6c50b543cadb5433bf0c3c423661193a1c3c288f24bf9988f3c6e3c543",
+      "note": "Definition approval for the source-backed 48-export Retry companion, eight stable requirements, and 64-test evidence."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783994510,
+      "digest": "1da58a78cc04588b5a708b498d3abb2cd51f1a2a3d2a2cecee49d45c16c818a1",
+      "note": "Closing approval after strict 100% portable coverage, 48/48 export validation, native Swift build, and all 64 tests."
+    }
+  ]
+}
